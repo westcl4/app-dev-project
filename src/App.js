@@ -32,7 +32,7 @@ class App extends Component {
         return (
             <div>
                 <Navbar color="inverse" light expand="md">
-                    <NavbarBrand href="/">reactstrap</NavbarBrand>
+                    <NavbarBrand href="/">Dunedin3D</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
@@ -49,7 +49,7 @@ class App extends Component {
                     <Container>
                         <Row>
                             <Col>
-                                <h1>Welcome to React</h1>
+                                <h1>Welcome to Dunedin3D</h1>
                                 <p>
                                     <Button
                                         tag="a"
@@ -58,7 +58,7 @@ class App extends Component {
                                         href="http://reactstrap.github.io"
                                         target="_blank"
                                     >
-                                        View Reactstrap Docs
+                                        Make a new Order
                                     </Button>
                                 </p>
                             </Col>
