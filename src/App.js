@@ -1,5 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
 import "./App.css";
+import Header from "./components/Header";
 import {
     Collapse,
     Navbar,
@@ -38,10 +39,10 @@ class App extends Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/components/">Components</NavLink>
+                                <NavLink href="/components/">Order Now</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+                                <NavLink href="">New Customer</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>
@@ -50,7 +51,7 @@ class App extends Component {
                     <Container>
                         <Row>
                             <Col>
-                                <h1>Welcome to Dunedin3D</h1>
+                            <Header /> 
                                 <p>
                                     <Button
                                         tag="a"
