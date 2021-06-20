@@ -9,3 +9,4 @@ Local Dev install:
 1. Download the repository
 2. `npm i` installs node 
 3. `npm install axios` install axios
+4. `npm install react-router-dom` install react router
