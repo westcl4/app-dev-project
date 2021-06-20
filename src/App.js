@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from 'react';
 import "./App.css";
 import Header from "./components/Header";
+import { NavLink } from 'react-router-dom';
 import {
     Collapse,
     Navbar,
@@ -71,5 +72,15 @@ class App extends Component {
         );
     }
 }
+
+const Navigation = () => (
+    <nav>
+      <ul>
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/about'>About</NavLink></li>
+        <li><NavLink to='/contact'>Contact</NavLink></li>
+      </ul>
+    </nav>
+  );
 
 export default App;
