@@ -1,4 +1,4 @@
-import { Route, IndexRoute } from 'react-router';
+import { Route, IndexRoute } from 'react-router-dom';
 
 /**
  * Import all page components here
