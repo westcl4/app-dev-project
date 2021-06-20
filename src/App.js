@@ -16,99 +16,52 @@ import {
   Jumbotron,
   Button,
 } from "reactstrap";
-import Customer from "./pages/Customer.js";
-import Models from "./pages/Models.js";
-import Home from "./pages/Home.js";
+import Customer from "./pages/Customer";
+import Models from "./pages/Models";
+import Homepage from "./pages/Homepage";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false,
-    };
-  }
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen,
-    });
-  }
-  render() {
-    return (
+function App() {
+  return (
+    <>
       <Router>
-        <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="pages/Models">Models</Link>
-            </li>
-            <li>
-              <Link to="pages/Customer">Customer</Link>
-            </li>
-          </ul>
-
-          <Switch>
-            <Route path="pages/Models">
-              <Models />
-            </Route>
-            <Route path="pages/Customer">
-              <Customer />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </div>
+        <Container>
+          <Navbar color="inverse" light expand="md">
+            <Col>
+              <NavbarBrand href="/">Dunedin3D</NavbarBrand>
+            </Col>
+            <Col>
+              <Nav>
+                <NavItem>
+                  <Link to="/">Home</Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/Customer">Customer</Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/Models">Models</Link>
+                </NavItem>
+              </Nav>
+            </Col>
+          </Navbar>
+        </Container>
+        <main className="content">
+          <Container>
+            <Switch>
+              <Route exact path="/">
+              <Homepage />
+              </Route>
+              <Route exact path="/Customer">
+                <Customer />
+              </Route>
+              <Route exact path="/Models">
+                <Models />
+              </Route>
+            </Switch>
+          </Container>
+        </main>
       </Router>
-      //   <div>
-      //     <Router>
-      //       <Navbar color="inverse" light expand="md">
-      //         <NavbarBrand href="/">Dunedin3D</NavbarBrand>
-      //         <NavbarToggler onClick={this.toggle} />
-      //         <Collapse isOpen={this.state.isOpen} navbar>
-      //           <nav>
-      //             <ul>
-      //               <li>
-      //                 <NavLink to="/">Home</NavLink>
-      //               </li>
-      //               <li>
-      //                 <NavLink to="/about">About</NavLink>
-      //               </li>
-      //               <li>
-      //                 <NavLink to="/contact">Contact</NavLink>
-      //               </li>
-      //             </ul>
-      //           </nav>
-      //         </Collapse>
-      //       </Navbar>
-      //     </Router>
-      //     <Jumbotron>
-      //       <Container>
-      //         <Row>
-      //           <Col>
-      //             <Header />
-      //             <p>
-      //               <Button
-      //                 tag="a"
-      //                 color="success"
-      //                 size="large"
-      //                 href="http://reactstrap.github.io"
-      //                 target="_blank"
-      //               >
-      //                 Make a new Order
-      //               </Button>
-      //             </p>
-      //           </Col>
-      //         </Row>
-      //       </Container>
-      //     </Jumbotron>
-      //   </div>
-      //);
-    );
-  }
+    </>
+  );
 }
 
 export default App;
