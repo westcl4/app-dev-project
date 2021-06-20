@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import { Switch, Route, Router, Link } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router, Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -16,6 +16,9 @@ import {
   Jumbotron,
   Button,
 } from "reactstrap";
+import Customer from "./pages/Customer.js";
+import Models from "./pages/Models.js";
+import Home from "./pages/Home.js";
 
 class App extends Component {
   constructor(props) {
@@ -40,19 +43,19 @@ class App extends Component {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="pages/models">Models</Link>
+              <Link to="pages/Models">Models</Link>
             </li>
             <li>
-              <Link to="pages/customer">Customer</Link>
+              <Link to="pages/Customer">Customer</Link>
             </li>
           </ul>
 
           <Switch>
-            <Route path="pages/models">
-              <About />
+            <Route path="pages/Models">
+              <Models />
             </Route>
-            <Route path="pages/customer">
-              <Topics />
+            <Route path="pages/Customer">
+              <Customer />
             </Route>
             <Route path="/">
               <Home />
