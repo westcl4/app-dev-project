@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 
+
 const Customer = () => {
     const [customers, setCustomers] = useState([
         { firstname: 'Test', lastname: 'Customer', email: 'test@gmail.com', phone: '123', id: 1},

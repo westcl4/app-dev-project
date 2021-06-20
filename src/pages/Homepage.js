@@ -2,8 +2,8 @@ import React from 'react'
 
 const Homepage = () => {
     return (
-        <div>
-            <p>Welcome to Dunedin3d</p>
+        <div class ="home">
+            <h2>Homepage</h2>
         </div>
     )
 }

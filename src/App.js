@@ -1,5 +1,4 @@
 import React, { Component, useState, useEffect } from "react";
-import "./App.css";
 import Header from "./components/Header";
 import { Switch, Route, BrowserRouter as Router, Link } from "react-router-dom";
 import {
@@ -19,12 +18,14 @@ import {
 import Customer from "./pages/Customer";
 import Models from "./pages/Models";
 import Homepage from "./pages/Homepage";
+import './index.css';
 
 function App() {
   return (
     <>
       <Router>
         <Container>
+        
           <Navbar color="inverse" light expand="md">
             <Col>
               <NavbarBrand href="/">Dunedin3D</NavbarBrand>
@@ -41,9 +42,11 @@ function App() {
                   <Link to="/Models">Models</Link>
                 </NavItem>
               </Nav>
+              
             </Col>
           </Navbar>
         </Container>
+        <Header />
         <main className="content">
           <Container>
             <Switch>
