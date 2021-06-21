@@ -25,7 +25,6 @@ function App() {
     <>
       <Router>
         <Container>
-        
           <Navbar color="inverse" light expand="md">
             <Col>
               <NavbarBrand href="/">Dunedin3D</NavbarBrand>
@@ -41,8 +40,7 @@ function App() {
                 <NavItem>
                   <Link to="/Models">Models</Link>
                 </NavItem>
-              </Nav>
-              
+              </Nav> 
             </Col>
           </Navbar>
         </Container>

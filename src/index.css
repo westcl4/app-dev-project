@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+content {
   background-color: darkgrey;
 }
 
@@ -49,7 +53,6 @@ code {
 .navbar{
   display: flex;
   align-items: center;
-  max-width: fit-content;
 }
 
 .navbar .links {

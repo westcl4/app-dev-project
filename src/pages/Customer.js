@@ -14,10 +14,11 @@ const Customer = () => {
         <div className="customer-container">
             <p>Customer</p>
             {customers.map((customer)=> (
-                <div className='customer' key={customers.id}>
-                    <p>{customers.firstname}</p>
-                    <p>{customers.lastname}</p>
+                <div>
+                    <h3 key={customer.id}>{customer.firstname} {customer.lastname}</h3> 
                 </div>
+                   
+                
             ))}
         </div>
     )
