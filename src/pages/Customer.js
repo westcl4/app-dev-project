@@ -1,27 +1,40 @@
 import React from 'react'
-import { useState } from 'react';
+import PropTypes from "prop-types";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "shards-ui/dist/css/shards.min.css";
+import { Card } from "shards-react";
 
-
-const Customer = () => {
-    const [customers, setCustomers] = useState([
-        { firstname: 'Test', lastname: 'Customer', email: 'test@gmail.com', phone: '123', id: 1},
-        { firstname: 'Test', lastname: 'Customer', email: 'test@gmail.com', phone: '123', id: 2},
-        { firstname: 'Test', lastname: 'Customer', email: 'test@gmail.com', phone: '123', id: 3},
-
-    ]);
-
-    return (
-        <div className="customer-container">
-            <p>Customer</p>
-            {customers.map((customer)=> (
-                <div>
-                    <h3 key={customer.id}>{customer.firstname} {customer.lastname}</h3> 
-                </div>
-                   
-                
-            ))}
+class Customer extends React.Component {
+    render() {
+      const { first_name, last_name, email, phone, isLoading } = this.props;
+  
+      const userDetails = (
+        <div>
+          <h4 className="name">{first_name} {last_name}</h4>
+          <span className="email">{email}</span>
+          <span className="email">{phone}</span>
         </div>
-    )
-}
-
-export default Customer
+      );
+  
+      const loadingMessage = <span className="d-flex m-auto">Loading...</span>;
+  
+      return (
+        <Card
+          className="mx-auto mt-4 text-center p-5"
+          style={{ maxWidth: "300px", minHeight: "250px" }}
+        >
+          {isLoading ? loadingMessage : userDetails}
+        </Card>
+      );
+    }
+  }
+  
+  Customer.propTypes = {
+    first_name: PropTypes.string,
+    last_name: PropTypes.string,
+    email: PropTypes.string,
+    phone: PropTypes.string,
+    isLoading: PropTypes.bool
+  };
+  
+  export default Customer;

@@ -19,6 +19,7 @@ import Customer from "./pages/Customer";
 import Models from "./pages/Models";
 import Homepage from "./pages/Homepage";
 import './index.css';
+import API from "./utils/API";
 
 function App() {
   return (
