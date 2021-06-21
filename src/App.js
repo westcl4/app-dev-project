@@ -18,7 +18,7 @@ import {
 import Customer from "./pages/Customer";
 import Models from "./pages/Models";
 import Homepage from "./pages/Homepage";
-import './index.css';
+import "./index.css";
 import API from "./utils/API";
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
                 <NavItem>
                   <Link to="/Models">Models</Link>
                 </NavItem>
-              </Nav> 
+              </Nav>
             </Col>
           </Navbar>
         </Container>
@@ -50,10 +50,10 @@ function App() {
           <Container>
             <Switch>
               <Route exact path="/">
-              <Homepage />
+                <Homepage />
               </Route>
               <Route exact path="/Customer">
-                <Customer />
+                <Customer></Customer>
               </Route>
               <Route exact path="/Models">
                 <Models />
